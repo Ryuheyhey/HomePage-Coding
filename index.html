@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAL 模写コーディング</title>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/header.css"></link>
+  <link rel="stylesheet" href="css/main.css"></link>
+</head> 
+<body>
+  <header >
+    <div class="container-fluid" id="head">
+      <div>
+        <img src="img/logo.svg"  class="item-icon">
+        
+      </div>
+      <!-- <span class="material-icons" id="menu" @click="open">
+        menu
+        </span> -->
+        <span class="material-icons" id="menu" @click="open">
+          menu
+          </span>
+    <!-- PCのメニュー -->
+      <div class="pc-info">
+        <ul>
+          <li><a href="">運搬情報/輸送実績</a></li>
+          <li><a href="">航空券予約</a></li>
+          <li><a href="">お問い合わせ</a></li>
+          <li><a href="">English</a></li>
+        </ul>
+      </div>
+
+      
+    </div>
+    
+    <div class="pc-menu" id="app">
+      <ul>
+        <li class="DetailParent">
+          企業理念・会社案内
+        </li>
+        <li class="DetailParent">
+          安全・品質
+        </li>
+        <li class="DetailParent">
+          サステナビリティ
+        </li>
+        <li class="DetailParent">
+          IR情報
+        </li>
+        <li class="DetailParent">
+          学ぶ・楽しむ
+        </li>
+        <li class="DetailParent">
+          プレリリース
+        </li>
+        <li class="DetailParent">
+          作用情報</li>
+        </ul>
+        
+        <div class="overlay" >
+          <ul id="detail">
+            <li class="ListTop">企業理念・会社案内トップ<span class="material-icons">
+              keyboard_arrow_right
+              </span></li>
+            <li>JALグループ企業理念<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>JALフィロソフィ<span class="material-icons">
+              chevron_right
+              </span></li>
+          </ul>
+          <ul id="detail">
+            <li>ブランドストーリー<span class="material-icons">
+              crop_square
+              </span></li>
+            <li>バトンタッチ<span class="material-icons">
+              crop_square
+              </span></li>
+            <li>チャレンジJAL<span class="material-icons">
+              crop_square
+              </span></li>
+          </ul>
+        </div>
+        
+        <div class="overlay">
+          <ul id="detail">
+            <li class="ListTop">安全・品質トップ</li>
+            <li>安全憲章<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>安全管理体制<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>JALグループ安全報告書<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>安全アドバイザリーグループ<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>安全啓発センター<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>航空安全の仕組み<span class="material-icons">
+              chevron_right
+              </span></li>
+          </ul>
+        </div>
+
+        <div class="overlay">
+          <ul id="detail">
+            <li class="ListTop">サステナビリティトップ</li>
+            <li>サステナビリティ・マネジメント<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>JALグループ行動規範<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>統合報告書<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>主要ESGデータ<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>ステークホルダーとの対話<span class="material-icons">
+              chevron_right
+              </span></li>
+          </ul>
+        </div>
+        <div class="overlay">
+          <ul id="detail">
+            <li class="ListTop">IR情報トップ</li>
+            <li>株主優待のご案内<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>株主優待に関するよくあるご質問<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>株主特別企画のご案内<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>株主の皆様へ<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>JALグループの事業・サービスについて<span class="material-icons">
+              chevron_right
+              </span></li>
+          </ul>
+        </div>
+        <div class="overlay">
+          <ul id="detail">
+            <li class="ListTop">学ぶ・楽しむトップ</li>
+            <li>JAL工場見学<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>JAL折り紙ヒコーキ教室<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>JAL STEAM SCHOOL<span class="material-icons">
+              chevron_right
+              </span></li>
+            <li>JAL空育<span class="material-icons">
+              chevron_right
+              </span></li>
+          </ul>
+        </div>
+      </div>
+    
+
+      
+      <!-- SPのメニュー  -->
+        <div class="sp-menu" id="app2">
+          <ul>
+            <li class="detail-parent" id="detailParent01" @click="open01">            
+               企業理念・会社案内
+               <span class="material-icons add">add</span>
+            </li>
+                 <ul class="detail" id="detail01">
+                   <li><a>LALグループ企業理念</a></li>
+                   <li><a>フィロソフィ</a></li>
+                  <li><a>ブランドストーリー</a></li>
+                </ul>                         
+                <li class="detail-parent" id="detailParent02" @click="open02">              
+                  安全・品質
+                <span class="material-icons add">add</span>              
+              </li>
+              <ul class="detail" id="detail02">
+                  <li><a>安全・品質トップ</a></li>
+                  <li><a>安全管理体制</a></li>
+                  <li><a>JALグループ安全報告書</a></li>
+                  <li><a>安全アドバイザリーグループ</a></li>
+                </ul>
+                <li class="detail-parent" id="detailParent03" @click="open03">
+              サステナビリティ
+              <span class="material-icons add">add</span>
+            </li>
+            <ul class="detail" id="detail03">
+              <li><a>サステナビリティトップ</a></li>
+              <li><a>サステナビリティ・マネジメント</a></li>
+              <li><a>JALグループ行動規範</a></li>
+              <li><a>統合報告書</a></li>
+            </ul>
+            <li class="detail-parent"id="detailParent04" @click="open04">
+              IR情報
+              <span class="material-icons add">add</span>
+            </li>
+            <ul class="detail" id="detail04">
+              <li><a>IR情報トップ</a></li>
+              <li><a>株主優待のご案内</a></li>
+              <li><a>株主の皆様へ</a></li>
+            </ul>
+            <li class="detail-parent" id="detailParent05" @click="open05">
+              学ぶ・楽しむ
+              <span class="material-icons add">add</span>
+            </li>
+            <ul class="detail" id="detail05">
+              <li><a>学ぶ・楽しむトップ</a></li>
+              <li><a>JAL空育</a></li>
+              <li><a>工場見学のご案内</a></li>
+            </ul>
+            <li>プレリソース</li>
+            <li>採用情報</li>
+          </ul>
+          <ul class="sp-info">
+            <li>運搬情報/輸送実績</li>
+            <li>航空券予約</li>
+            <li>お問い合わせ</li>
+          </ul>
+
+          <div class="search">
+            <a href="">
+              <span class="material-icons">
+                search
+              </span>
+            </a>
+            <input type="text" placeholder="サイト内検索（別ウインドウで開きます）">
+          </div>
+            
+          <div class="English">
+              <a href="">
+                <span class="material-icons">
+                  language
+                </span>
+                English
+              </a>
+            </div>    
+          </div>
+        </header>
+
+        <main>
+          <div class="background">
+            <img src="img/pic003.jpg">
+          </div>
+          <div class="slogan">
+            <h1>FLY INTO</h1>
+            <h1>TOMORROW</h1>
+          </div>
+
+          <div class="table">
+            
+            <div class="row">
+              <div class="topic">重要なお知らせ</div>
+              
+
+              <div class="row selectable" id="info">
+                <div class="message">{{ info }}</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div rowspan="3" class="topic">NEWS<p>お知らせ一覧</p></div>
+              
+              
+              <div class="main">
+
+                <div class="row selectable" id="news">
+                  <div class="date">{{ date }}</div><div class="message">{{ message }}</div>              
+                </div>
+
+                <div class="row selectable" id="secNews">
+                  <div class="date">{{ date }}</div><div class="message">{{ message }}</div>
+                </div>
+                
+                <div class="row  selectable" id="thiNews">
+                  <div class="date">{{ date }}</div><div class="message">{{ message }}</div>
+                </div>
+              </div>
+              
+            </div>
+            </div>
+
+            <div class="content">
+
+              <h1 class="title">企業理念・会社案内<span class="material-icons">
+                chevron_right
+                </span></h1>
+              
+              <ul class="col">
+                <li>
+                  <div class="image">
+                  <img src="img/philosophy_img_rinen@2x.png">
+                </div>
+                  <div class="guide">
+                    JALグループ企業理念
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <img src="img/philosophy_img_philosophy@2x.png">
+                  </div>
+                    <div class="guide">
+                      JALフィロソフィ
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <img src="img/philosophy_img_message@2x.png">
+                </div>
+                  <div class="guide">
+                    JALグループ会社情報
+                  </div>
+              </li>
+            </ul>
+            
+          </div>
+
+          <div class="InContent">
+            <h1 class="subTitle">私たちの想い</h1>       
+              <img src="img/ダウンロード.jpeg">              
+            <div class="story">
+              <div>
+                <h2>ブランドストーリー</h2>
+              </div>
+              <p>初めて世界の空に羽ばたいてから、私たちに受け継がれてきたもの。<br><br>それは、歴史や伝統に裏打ちされた技術や経験に誇りを持ち、妥協を許さない心です。</p>
+            </div>     
+          
+            <div class="ItemsParent">
+              
+              <div class="items">
+                <div class="ItemsImage">
+                  <img src="img/think_img_baton@2x.png">
+                </div>
+                <div class="ItemsInt">
+                  <p>バトンタッチ</p>
+                  <p>最高のサービスのために</p>
+                </div>
+              </div>
+                
+                <div class="items">
+                  <div class="ItemsImage">
+                    <img src="img/think_img_challenge@2x.png">
+                  </div>
+                  <div class="ItemsInt">
+                    <p>チャレンジJAL</p>
+                    <p>いつも心に、チャレンジを。</p>
+                  </div>
+                </div>
+              </div>
+                
+     
+
+        </div>
+
+        <div class="content">
+          <h1 class="title">安全・品質への取り組み</h1>
+          <h２ class="subTitle">安全を支える3つの柱</h2>
+
+          <div class="wall">
+            <img src="img/pic003.jpg">
+          </div>
+
+          <div class="nav">
+            <div class="navItems">
+              <div>
+                <span class="material-icons">
+                  verified_user
+                </span>
+                <a>安全に対する<br><br>考え方・体制</a>
+              </div>
+                <span class="material-icons">
+                navigate_next
+                </span>
+            </div>
+            <div class="navItems">
+              <div>
+                <span class="material-icons">
+                  groups
+                </span>
+                <a>安全・安心を<br><br>ご提供する<br><br>スタッフの業務</a>
+              </div>
+                <span class="material-icons">
+                  navigate_next
+                </span>
+            </div>
+            <div class="navItems">
+              <div>
+                <span class="material-icons">
+                  flight
+                </span>
+              <a>安全確保に<br><br>かかせない<br><br>技術・装備・設備</a>
+            </div>
+              <span class="material-icons">
+                navigate_next
+                </span>
+            </div>
+          </div>
+          
+
+        </div>
+        
+          
+
+            
+        
+            
+          </main>
+
+
+          
+          <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> 
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
